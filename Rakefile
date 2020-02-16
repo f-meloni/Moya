@@ -158,7 +158,7 @@ task :create_release, :version do |task, args|
   changelog_filename = "CHANGELOG.md"	
   changelog = File.read(changelog_filename)
   Octokit::Client.new(netrc: true).
-    create_release('Moya/Moya',
+    create_release('f-meloni/Moya',
                    version,
                    name: version,
                    body: changelog.split(/^# /)[2].strip)
